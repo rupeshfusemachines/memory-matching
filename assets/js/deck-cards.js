@@ -1,0 +1,1 @@
+const deckCards = ["banana.png", "banana.png", "cherry.png", "cherry.png", "kiwi.png", "kiwi.png", "orange.png", "orange.png", "pineapple.png", "pineapple.png", "plum.jpg", "plum.jpg", "strawberry.jpg", "strawberry.jpg", "watermelon.jpg", "watermelon.jpg"];

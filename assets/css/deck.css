@@ -1,0 +1,82 @@
+/*----------------------------------  
+Deck of Cards
+------------------------------------*/
+
+
+/*Mobile first responsivness*/
+
+.deck {
+    background: linear-gradient(to bottom, #5cf, #28e);
+    border-radius: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 380px;
+    width: 380px;
+    margin-bottom: 6em;
+    padding: 0.5em;
+}
+
+.deck,
+.card {
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.card {
+    background: #fc4;
+    border-radius: 0.5em;
+    height: 6em;
+    width: 6em;
+}
+
+
+/*
+  To disable the color highlight if and img is clicked
+  https://stackoverflow.com/questions/21107439/disable-or-change-firefoxs-element-image-highlight-color
+  */
+
+img {
+    user-select: none;
+    width: 6em;
+}
+
+.deck img {
+    visibility: hidden;
+}
+
+.deck .card.flip {
+    background: #fff;
+    cursor: default;
+    transform: rotateY(180deg);
+    transition: transform 0.3s linear;
+    pointer-events: none;
+}
+
+.flip img {
+    background: #fff;
+    visibility: visible;
+}
+
+.deck .card.match {
+    background: #39d;
+    visibility: visible;
+    cursor: default;
+    animation: pulse 1s;
+}
+
+.match img {
+    background: #39d;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
